@@ -1,0 +1,28 @@
+<section class="expertise">
+  <div class="wrap">
+    <p class="eyebrow">ERP expertise</p>
+    <h2>Multi-platform ERP mastery</h2>
+    <p class="intro">
+      We work with multiple ERP solutions, giving you the freedom to choose the platform that fits —
+      and the expertise to make it succeed.
+    </p>
+    <div class="platforms">
+      @for (platform of platforms; track platform.name) {
+        <article>
+          <h3>{{ platform.name }}</h3>
+          <p>{{ platform.detail }}</p>
+        </article>
+      }
+    </div>
+    <div class="notes">
+      <article>
+        <h3>AI-Powered Quality Document Management</h3>
+        <p>Innovative solutions for quality document management systems powered by AI technology — streamlining compliance and document workflows.</p>
+      </article>
+      <article>
+        <h3>Cloud &amp; Legacy Expertise</h3>
+        <p>From mainframes and AS/400 to modern cloud environments — we bridge legacy systems with contemporary infrastructure seamlessly.</p>
+      </article>
+    </div>
+  </div>
+</section>

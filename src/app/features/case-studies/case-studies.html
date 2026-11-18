@@ -1,0 +1,30 @@
+<section class="studies" id="case-studies">
+  <div class="wrap">
+    <p class="eyebrow">Case studies</p>
+    <h2>Partner implementations that delivered results</h2>
+    <p class="intro">
+      Real client engagements where our partner platforms solved tough operational challenges and
+      produced measurable outcomes — from ERP rollouts to AI-driven process automation.
+    </p>
+    <div class="list">
+      @for (study of studies; track study.title) {
+        <article>
+          <p class="partner">{{ study.partner }}</p>
+          <h3>{{ study.title }}</h3>
+          <p class="kicker">Challenge</p>
+          <p>{{ study.challenge }}</p>
+          <p class="kicker">Solution delivered</p>
+          <p>{{ study.solution }}</p>
+          <dl>
+            @for (metric of study.metrics; track metric.label) {
+              <div>
+                <dt>{{ metric.value }}</dt>
+                <dd>{{ metric.label }}</dd>
+              </div>
+            }
+          </dl>
+        </article>
+      }
+    </div>
+  </div>
+</section>

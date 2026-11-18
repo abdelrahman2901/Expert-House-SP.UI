@@ -1,0 +1,81 @@
+<div class="page" id="top">
+  <header class="header">
+    <div class="bar">
+      <a class="brand" href="#top" (click)="closeMenu()">
+        <img src="assets/expert_house_sp_logo.jpg" alt="Expert House SP logo" width="44" height="44">
+        <span>
+          <strong>EXPERT HOUSE SP</strong>
+          <em>When Innovation Matters</em>
+        </span>
+      </a>
+      <button class="menu" type="button" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()">
+        Menu
+      </button>
+      <nav class="nav" [class.open]="menuOpen()">
+        <a href="#about" (click)="closeMenu()">About</a>
+        <a href="#services" (click)="closeMenu()">Services</a>
+        <a href="#solutions" (click)="closeMenu()">Solutions</a>
+        <a href="#partners" (click)="closeMenu()">Partners</a>
+        <a href="#contact" (click)="closeMenu()">Contact</a>
+        <a class="talk" href="#contact" (click)="closeMenu()">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="pill">Software House · ERP · Process Automation</p>
+      <h1>Innovating Business Applications <span>Since 2003</span></h1>
+      <p class="script">When Innovation Matters</p>
+      <p class="lead">
+        A leading software house specializing in ERP implementation consultancy, project management,
+        and business process automation — delivering tailored software solutions across mainframes,
+        AS/400, Intel servers, and the cloud.
+      </p>
+      <div class="actions">
+        <a class="primary" href="#services">Explore our expertise</a>
+        <a class="secondary" href="#solutions">Our solutions</a>
+      </div>
+      <dl class="stats">
+        <div><dt>2003</dt><dd>Established</dd></div>
+        <div><dt>20+</dt><dd>Years of Expertise</dd></div>
+        <div><dt>4</dt><dd>ERP Platforms</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <div appReveal><app-about /></div>
+  <div appReveal><app-services /></div>
+  <div appReveal><app-solutions /></div>
+  <div appReveal><app-partners /></div>
+  <div appReveal><app-expertise /></div>
+  <div appReveal><app-case-studies /></div>
+  <div appReveal><app-linkedin /></div>
+  <div appReveal><app-contact /></div>
+
+  <footer class="footer" appReveal>
+    <div class="footer-grid">
+      <div>
+        <p class="brand-name">EXPERT HOUSE SP</p>
+        <p>Innovating business applications since 2003. ERP consultancy, project management, and business process automation.</p>
+        <p class="script">When Innovation Matters</p>
+        <a href="https://www.linkedin.com/company/expert-house-sp" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      </div>
+      <div>
+        <h2>Solutions</h2>
+        <a href="#solutions">Xfin — Enterprise Finance</a>
+        <a href="#solutions">Xacc — SME Accounting</a>
+        <a href="#partners">Onfinity ERP</a>
+        <a href="#partners">Bimser Automation</a>
+      </div>
+      <div>
+        <h2>Company</h2>
+        <a href="#about">About us</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <p class="legal">© {{ year }} Expert House SP. All rights reserved.</p>
+    <p class="tag">Empowering businesses with innovative, scalable software solutions.</p>
+  </footer>
+</div>

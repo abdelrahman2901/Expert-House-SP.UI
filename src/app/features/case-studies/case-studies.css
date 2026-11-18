@@ -1,0 +1,14 @@
+.studies { padding: 24px 24px 96px; background: var(--cream); }
+.wrap { max-width: 1120px; margin: 0 auto; }
+.eyebrow { margin: 0; color: #a64547; letter-spacing: 0.14em; text-transform: uppercase; font-size: 13px; font-weight: 600; }
+h2 { margin: 12px 0; max-width: 18ch; font-family: Sora, sans-serif; font-size: clamp(32px, 4vw, 48px); line-height: 1.1; }
+.intro { max-width: 70ch; color: var(--muted); line-height: 1.7; }
+.list { display: grid; gap: 16px; margin-top: 32px; }
+article { background: #fff; border-radius: 20px; padding: 28px; }
+.partner { margin: 0; color: var(--script); font-weight: 600; }
+h3 { margin: 6px 0 16px; font-family: Sora, sans-serif; font-size: 24px; }
+.kicker { margin: 16px 0 4px; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #a64547; font-weight: 600; }
+p { margin: 0; color: var(--muted); line-height: 1.7; }
+dl { display: flex; gap: 32px; margin: 20px 0 0; }
+dt { font-family: Sora, sans-serif; font-size: 32px; }
+dd { margin: 4px 0 0; color: var(--slate); }

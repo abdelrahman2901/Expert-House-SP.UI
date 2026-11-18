@@ -1,0 +1,52 @@
+<section class="contact" id="contact">
+  <div class="layout">
+    <div>
+      <p class="eyebrow">Get in touch</p>
+      <h2>Let's build your next solution together</h2>
+      <p>
+        Whether you're planning an ERP implementation, automating business processes, or exploring
+        our proprietary solutions — our team is ready to help.
+      </p>
+      <ul>
+        <li><span>Email</span><a href="mailto:m.ebada@aol.co.uk">m.ebada@aol.co.uk</a></li>
+        <li><span>Phone</span><a href="tel:+201220800205">+20 122 080 0205</a></li>
+        <li><span>Location</span><p>Cairo, Egypt</p></li>
+        <li>
+          <span>LinkedIn</span>
+          <a href="https://www.linkedin.com/company/expert-house-sp" target="_blank" rel="noopener">expert-house-sp</a>
+        </li>
+      </ul>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+      <label>
+        Full name
+        <input type="text" formControlName="name" autocomplete="name" maxlength="100" placeholder="Your name" required>
+      </label>
+      <label>
+        Email
+        <input type="email" formControlName="email" autocomplete="email" maxlength="254" placeholder="you@company.com" required>
+      </label>
+      <label>
+        Company
+        <input type="text" formControlName="company" autocomplete="organization" maxlength="120" placeholder="Company name">
+      </label>
+      <label>
+        Message
+        <textarea formControlName="message" maxlength="4000" rows="5" placeholder="Tell us about your project..." required></textarea>
+      </label>
+      <label class="trap" aria-hidden="true">
+        Website
+        <input type="text" formControlName="website" tabindex="-1" autocomplete="off" maxlength="200">
+      </label>
+      <button type="submit" [disabled]="status() === 'loading'">
+        {{ status() === 'loading' ? 'Sending...' : 'Send message' }}
+      </button>
+      @if (notice()) {
+        <p class="notice" [class.ok]="status() === 'success'" [class.bad]="status() === 'error'" role="status">
+          {{ notice() }}
+        </p>
+      }
+    </form>
+  </div>
+</section>

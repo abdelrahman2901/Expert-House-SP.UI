@@ -1,0 +1,18 @@
+<section class="services" id="services">
+  <div class="wrap">
+    <p class="eyebrow">What we do</p>
+    <h2>Services built around your business</h2>
+    <p class="intro">
+      From ERP strategy to process automation, we deliver solutions that make organizations more
+      efficient, agile, and competitive.
+    </p>
+    <div class="grid">
+      @for (item of items; track item.title) {
+        <article>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.text }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>
