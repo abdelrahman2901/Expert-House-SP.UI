@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
-import { Home } from './features/home/home';
+import { applySeo } from './core/seo';
 
 @Component({
   selector: 'app-root',
-  imports: [Home],
-  template: '<app-home />',
+  imports: [RouterOutlet],
+  template: '<router-outlet />',
 })
-export class App {}
+export class App {
+  constructor() {
+    applySeo();
+  }
+}

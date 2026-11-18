@@ -1,0 +1,17 @@
+{
+  "name": "Expert House SP",
+  "short_name": "Expert House",
+  "description": "ERP consultancy, project management, and business process automation since 2003.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#32394c",
+  "theme_color": "#32394c",
+  "icons": [
+    {
+      "src": "assets/expert_house_sp_logo.jpg",
+      "sizes": "any",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}

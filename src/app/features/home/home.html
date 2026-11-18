@@ -8,10 +8,10 @@
           <em>When Innovation Matters</em>
         </span>
       </a>
-      <button class="menu" type="button" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()">
+      <button class="menu" type="button" (click)="toggleMenu()" aria-controls="primary-nav" [attr.aria-expanded]="menuOpen()">
         Menu
       </button>
-      <nav class="nav" [class.open]="menuOpen()">
+      <nav id="primary-nav" class="nav" aria-label="Primary" [class.open]="menuOpen()">
         <a href="#about" (click)="closeMenu()">About</a>
         <a href="#services" (click)="closeMenu()">Services</a>
         <a href="#solutions" (click)="closeMenu()">Solutions</a>
@@ -22,6 +22,7 @@
     </div>
   </header>
 
+  <main>
   <section class="hero">
     <div class="hero-inner">
       <p class="pill">Software House · ERP · Process Automation</p>
@@ -44,14 +45,63 @@
     </div>
   </section>
 
-  <div appReveal><app-about /></div>
-  <div appReveal><app-services /></div>
-  <div appReveal><app-solutions /></div>
-  <div appReveal><app-partners /></div>
-  <div appReveal><app-expertise /></div>
-  <div appReveal><app-case-studies /></div>
-  <div appReveal><app-linkedin /></div>
-  <div appReveal><app-contact /></div>
+  <div id="about" class="section-slot">
+    @defer (on viewport; hydrate on viewport) {
+      <div appReveal><app-about /></div>
+    } @placeholder {
+      <div class="section-hold"></div>
+    }
+  </div>
+  <div id="services" class="section-slot">
+    @defer (on viewport; hydrate on viewport) {
+      <div appReveal><app-services /></div>
+    } @placeholder {
+      <div class="section-hold"></div>
+    }
+  </div>
+  <div id="solutions" class="section-slot">
+    @defer (on viewport; hydrate on viewport) {
+      <div appReveal><app-solutions /></div>
+    } @placeholder {
+      <div class="section-hold"></div>
+    }
+  </div>
+  <div id="partners" class="section-slot">
+    @defer (on viewport; hydrate on viewport) {
+      <div appReveal><app-partners /></div>
+    } @placeholder {
+      <div class="section-hold"></div>
+    }
+  </div>
+  <div class="section-slot">
+    @defer (on viewport; hydrate on viewport) {
+      <div appReveal><app-expertise /></div>
+    } @placeholder {
+      <div class="section-hold"></div>
+    }
+  </div>
+  <div id="case-studies" class="section-slot">
+    @defer (on viewport; hydrate on viewport) {
+      <div appReveal><app-case-studies /></div>
+    } @placeholder {
+      <div class="section-hold"></div>
+    }
+  </div>
+  <div id="linkedin-updates" class="section-slot">
+    @defer (on viewport; hydrate on viewport) {
+      <div appReveal><app-linkedin /></div>
+    } @placeholder {
+      <div class="section-hold"></div>
+    }
+  </div>
+  <div id="contact" class="section-slot">
+    @defer (on viewport; hydrate on viewport) {
+      <div appReveal><app-contact /></div>
+    } @placeholder {
+      <div class="section-hold"></div>
+    }
+  </div>
+  </main>
 
   <footer class="footer" appReveal>
     <div class="footer-grid">
